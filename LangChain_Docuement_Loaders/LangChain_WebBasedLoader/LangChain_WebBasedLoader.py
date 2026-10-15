@@ -31,3 +31,5 @@ chain= prompt | llm | parser
 
 result=chain.invoke(docs[0].page_content)
 print("\n\n about self reflection  : ", result)
+
+#WEbBasedLoader uses the beautifulsoup and request library behind the scenes so it they should be in requirements file
