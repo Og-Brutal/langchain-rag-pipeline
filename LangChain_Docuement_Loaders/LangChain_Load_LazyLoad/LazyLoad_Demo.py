@@ -12,4 +12,3 @@ for d in docs:
     print("\n\n MetaData : ", d.metadata)
 
 
-
