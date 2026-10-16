@@ -8,3 +8,4 @@ pypdf
 beautifulsoup4
 requests
 langchain-experimental
+langchain-qdrant
