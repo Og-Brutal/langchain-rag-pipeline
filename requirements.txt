@@ -9,3 +9,4 @@ beautifulsoup4
 requests
 langchain-experimental
 langchain-qdrant
+qdrant-client
