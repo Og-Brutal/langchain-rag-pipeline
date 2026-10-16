@@ -10,3 +10,4 @@ requests
 langchain-experimental
 langchain-qdrant
 qdrant-client
+wikipedia
