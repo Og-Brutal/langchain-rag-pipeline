@@ -7,3 +7,4 @@ python-dotenv
 pypdf
 beautifulsoup4
 requests
+langchain-experimental
