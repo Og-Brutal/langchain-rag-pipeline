@@ -11,3 +11,4 @@ langchain-experimental
 langchain-qdrant
 qdrant-client
 wikipedia
+langchain-chroma
