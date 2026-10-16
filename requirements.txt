@@ -12,3 +12,4 @@ langchain-qdrant
 qdrant-client
 wikipedia
 langchain-chroma
+faiss-cpu
