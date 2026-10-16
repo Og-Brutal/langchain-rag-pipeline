@@ -22,7 +22,6 @@ embeddings = GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")
 vector_Store=FAISS.from_documents(
     documents=docs,
     embedding=embeddings,
-    
 )
 
 retriever1=vector_Store.as_retriever(
