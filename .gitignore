@@ -2,3 +2,4 @@
 .env
 __pycache__/
 qdrant_data
+why_overlap_chunk_in_recursive_character_ts.png
