@@ -66,28 +66,28 @@ Click any folder to jump straight to it.
 ```text
 langchain-rag-pipeline/
 │
-├── 📄 LangChain_Docuement_Loaders/          # Stage 1: loading data
-│   ├── LangChain_TextLoader/
-│   ├── LangChain_PDFLoader/
-│   ├── LangChain_DIrectoryLoader/
-│   ├── LangChain_CSVLoader/
-│   ├── LangChain_WebBasedLoader/
-│   └── LangChain_Load_LazyLoad/
+├── 📄 01_LangChain_Docuement_Loaders/       # Stage 1: loading data
+│   ├── 01_LangChain_TextLoader/
+│   ├── 02_LangChain_PDFLoader/
+│   ├── 03_LangChain_DIrectoryLoader/
+│   ├── 04_LangChain_Load_LazyLoad/
+│   ├── 05_LangChain_WebBasedLoader/
+│   └── 06_LangChain_CSVLoader/
 │
-├── ✂️ LangChain_Text_Splitters/             # Stage 2: chunking
-│   ├── LangChain_Length_Based_Text_Splitter/
-│   ├── LangChain_Text_Structure_Based_Text_Splitter/
-│   ├── LangChain_Document_Structure_Based_Text_Spliter/
-│   └── LangChain_Semantica_Text_SPlitter/
+├── ✂️ 02_LangChain_Text_Splitters/          # Stage 2: chunking
+│   ├── 01_LangChain_Length_Based_Text_Splitter/
+│   ├── 02_LangChain_Text_Structure_Based_Text_Splitter/
+│   ├── 03_LangChain_Document_Structure_Based_Text_Spliter/
+│   └── 04_LangChain_Semantica_Text_SPlitter/
 │
-├── 🗄️ LangChain_Vector_Store_DataBases/     # Stage 3: embeddings + vector stores
+├── 🗄️ 03_LangChain_Vector_Store_DataBases/  # Stage 3: embeddings + vector stores
 │
-├── 🔍 LangChain_Retrievers/                 # Stage 4: fetching relevant chunks
-│   ├── LangChain_Wikipedia_Retriever/
-│   ├── LangChain_Vector_Store_Retriever/
-│   ├── LangChain_MMR_Retriever/
-│   ├── LangChain_Multi_Query_Retriever/
-│   └── LangChain_Contextual_Compression_Retriever/
+├── 🔍 04_LangChain_Retrievers/              # Stage 4: fetching relevant chunks
+│   ├── 01_LangChain_Wikipedia_Retriever/
+│   ├── 02_LangChain_Vector_Store_Retriever/
+│   ├── 03_LangChain_MMR_Retriever/
+│   ├── 04_LangChain_Multi_Query_Retriever/
+│   └── 05_LangChain_Contextual_Compression_Retriever/
 │
 ├── requirements.txt
 ├── .gitignore
@@ -96,10 +96,10 @@ langchain-rag-pipeline/
 
 | Stage | Folder | What's inside |
 |---|---|---|
-| 1️⃣ Loading | [`LangChain_Docuement_Loaders`](./LangChain_Docuement_Loaders) | Loaders for text, PDF, directory, CSV and web pages |
-| 2️⃣ Splitting | [`LangChain_Text_Splitters`](./LangChain_Text_Splitters) | Length based, text-structure, document-structure and semantic splitters |
-| 3️⃣ Embeddings + Vector stores | [`LangChain_Vector_Store_DataBases`](./LangChain_Vector_Store_DataBases) | Vector store theory notes and a Qdrant notebook |
-| 4️⃣ Retrievers | [`LangChain_Retrievers`](./LangChain_Retrievers) | Five retriever types, each with a demo and notes |
+| 1️⃣ Loading | [`01_LangChain_Docuement_Loaders`](./01_LangChain_Docuement_Loaders) | Loaders for text, PDF, directory, CSV and web pages |
+| 2️⃣ Splitting | [`02_LangChain_Text_Splitters`](./02_LangChain_Text_Splitters) | Length based, text-structure, document-structure and semantic splitters |
+| 3️⃣ Embeddings + Vector stores | [`03_LangChain_Vector_Store_DataBases`](./03_LangChain_Vector_Store_DataBases) | Vector store theory notes and a Qdrant notebook |
+| 4️⃣ Retrievers | [`04_LangChain_Retrievers`](./04_LangChain_Retrievers) | Five retriever types, each with a demo and notes |
 
 **Root files**
 
@@ -112,21 +112,21 @@ langchain-rag-pipeline/
 
 ## 📄 1. Document Loaders
 
-📁 **Folder:** [`LangChain_Docuement_Loaders`](./LangChain_Docuement_Loaders)
+📁 **Folder:** [`01_LangChain_Docuement_Loaders`](./01_LangChain_Docuement_Loaders)
 
 A loader reads a source and returns a **list of `Document` objects**, each with `page_content` (the text) and `metadata` (source, page, etc.).
 
 | Loader | Demo folder | Documents returned |
 |---|---|---|
-| `TextLoader` | [`LangChain_TextLoader`](./LangChain_Docuement_Loaders/LangChain_TextLoader) | 1 per file |
-| `PyPDFLoader` | [`LangChain_PDFLoader`](./LangChain_Docuement_Loaders/LangChain_PDFLoader) | 1 per **page** |
-| `DirectoryLoader` | [`LangChain_DIrectoryLoader`](./LangChain_Docuement_Loaders/LangChain_DIrectoryLoader) | 1 per file / page, using a glob pattern |
-| `CSVLoader` | [`LangChain_CSVLoader`](./LangChain_Docuement_Loaders/LangChain_CSVLoader) | 1 per **row** |
-| `WebBaseLoader` | [`LangChain_WebBasedLoader`](./LangChain_Docuement_Loaders/LangChain_WebBasedLoader) · [Notes](./LangChain_Docuement_Loaders/LangChain_WebBasedLoader/Notes.md) | 1 per URL |
+| `TextLoader` | [`01_LangChain_TextLoader`](./01_LangChain_Docuement_Loaders/01_LangChain_TextLoader) | 1 per file |
+| `PyPDFLoader` | [`02_LangChain_PDFLoader`](./01_LangChain_Docuement_Loaders/02_LangChain_PDFLoader) | 1 per **page** |
+| `DirectoryLoader` | [`03_LangChain_DIrectoryLoader`](./01_LangChain_Docuement_Loaders/03_LangChain_DIrectoryLoader) | 1 per file / page, using a glob pattern |
+| `WebBaseLoader` | [`05_LangChain_WebBasedLoader`](./01_LangChain_Docuement_Loaders/05_LangChain_WebBasedLoader) · [Notes](./01_LangChain_Docuement_Loaders/05_LangChain_WebBasedLoader/Notes.md) | 1 per URL |
+| `CSVLoader` | [`06_LangChain_CSVLoader`](./01_LangChain_Docuement_Loaders/06_LangChain_CSVLoader) | 1 per **row** |
 
 ### ⚡ `load()` vs `lazy_load()`
 
-📁 [`LangChain_Load_LazyLoad`](./LangChain_Docuement_Loaders/LangChain_Load_LazyLoad) · [Notes](./LangChain_Docuement_Loaders/LangChain_Load_LazyLoad/Notes.md)
+📁 [`04_LangChain_Load_LazyLoad`](./01_LangChain_Docuement_Loaders/04_LangChain_Load_LazyLoad) · [Notes](./01_LangChain_Docuement_Loaders/04_LangChain_Load_LazyLoad/Notes.md)
 
 ```mermaid
 flowchart LR
@@ -159,16 +159,16 @@ flowchart LR
 
 ## ✂️ 2. Text Splitters
 
-📁 **Folder:** [`LangChain_Text_Splitters`](./LangChain_Text_Splitters) · [Overview notes](./LangChain_Text_Splitters/Notes.md)
+📁 **Folder:** [`02_LangChain_Text_Splitters`](./02_LangChain_Text_Splitters) · [Overview notes](./02_LangChain_Text_Splitters/Notes.md)
 
 LLMs and embedding models have **input limits**, so large text is split into smaller **chunks** before embedding. Smaller chunks give more accurate vectors, cleaner search results, and lower memory use.
 
 | Type | Splitter | Demo + notes |
 |---|---|---|
-| Length based | `CharacterTextSplitter` | [`LangChain_Length_Based_Text_Splitter`](./LangChain_Text_Splitters/LangChain_Length_Based_Text_Splitter) |
-| Text structure based | `RecursiveCharacterTextSplitter` | [`LangChain_Text_Structure_Based_Text_Splitter`](./LangChain_Text_Splitters/LangChain_Text_Structure_Based_Text_Splitter) |
-| Document structure based | `RecursiveCharacterTextSplitter.from_language` | [`LangChain_Document_Structure_Based_Text_Spliter`](./LangChain_Text_Splitters/LangChain_Document_Structure_Based_Text_Spliter) |
-| Semantic meaning based | `SemanticChunker` | [`LangChain_Semantica_Text_SPlitter`](./LangChain_Text_Splitters/LangChain_Semantica_Text_SPlitter) |
+| Length based | `CharacterTextSplitter` | [`01_LangChain_Length_Based_Text_Splitter`](./02_LangChain_Text_Splitters/01_LangChain_Length_Based_Text_Splitter) |
+| Text structure based | `RecursiveCharacterTextSplitter` | [`02_LangChain_Text_Structure_Based_Text_Splitter`](./02_LangChain_Text_Splitters/02_LangChain_Text_Structure_Based_Text_Splitter) |
+| Document structure based | `RecursiveCharacterTextSplitter.from_language` | [`03_LangChain_Document_Structure_Based_Text_Spliter`](./02_LangChain_Text_Splitters/03_LangChain_Document_Structure_Based_Text_Spliter) |
+| Semantic meaning based | `SemanticChunker` | [`04_LangChain_Semantica_Text_SPlitter`](./02_LangChain_Text_Splitters/04_LangChain_Semantica_Text_SPlitter) |
 
 ```mermaid
 flowchart TD
@@ -249,12 +249,12 @@ Chunk 3:               OPQRST
 
 ## 🗄️ 3. Embeddings and Vector Stores
 
-📁 **Folder:** [`LangChain_Vector_Store_DataBases`](./LangChain_Vector_Store_DataBases)
+📁 **Folder:** [`03_LangChain_Vector_Store_DataBases`](./03_LangChain_Vector_Store_DataBases)
 
 | File | What it is |
 |---|---|
-| [`Notes.md`](./LangChain_Vector_Store_DataBases/Notes.md) | Vector store theory: indexing, in-memory vs on-disk, vector store vs vector database, the LangChain common interface |
-| [`LangChain_Qdrant_Vector_Store_updated .ipynb`](./LangChain_Vector_Store_DataBases/LangChain_Qdrant_Vector_Store_updated%20.ipynb) | Hands-on Qdrant notebook (create a collection, add documents, search, scroll through stored points) |
+| [`Notes.md`](./03_LangChain_Vector_Store_DataBases/Notes.md) | Vector store theory: indexing, in-memory vs on-disk, vector store vs vector database, the LangChain common interface |
+| [`LangChain_Qdrant_Vector_Store_updated .ipynb`](./03_LangChain_Vector_Store_DataBases/LangChain_Qdrant_Vector_Store_updated%20.ipynb) | Hands-on Qdrant notebook (create a collection, add documents, search, scroll through stored points) |
 
 **Embeddings:** text chunks become vectors using `GoogleGenerativeAIEmbeddings(model="gemini-embedding-001")` in the demos.
 
@@ -273,24 +273,24 @@ flowchart LR
 | Store | Where it is used |
 |---|---|
 | **FAISS** | Retriever demos (in-memory) |
-| **Chroma** | [Vector Store Retriever](./LangChain_Retrievers/LangChain_Vector_Store_Retriever) |
-| **Qdrant** | [Qdrant notebook](./LangChain_Vector_Store_DataBases) (local, on-disk) |
+| **Chroma** | [Vector Store Retriever](./04_LangChain_Retrievers/02_LangChain_Vector_Store_Retriever) |
+| **Qdrant** | [Qdrant notebook](./03_LangChain_Vector_Store_DataBases) (local, on-disk) |
 
 ---
 
 ## 🔍 4. Retrievers
 
-📁 **Folder:** [`LangChain_Retrievers`](./LangChain_Retrievers)
+📁 **Folder:** [`04_LangChain_Retrievers`](./04_LangChain_Retrievers)
 
 A retriever takes a **query** and returns the most relevant **`Document`s**. Each folder has a runnable demo and revision notes.
 
 | Retriever | Idea in one line | Demo + notes |
 |---|---|---|
-| **Wikipedia** | Queries the Wikipedia API (**keyword matching**, no semantic search) | [`LangChain_Wikipedia_Retriever`](./LangChain_Retrievers/LangChain_Wikipedia_Retriever) · [Notes](./LangChain_Retrievers/LangChain_Wikipedia_Retriever/Notes.md) |
-| **Vector Store** | Embeds the query and returns the **top-k** closest chunks | [`LangChain_Vector_Store_Retriever`](./LangChain_Retrievers/LangChain_Vector_Store_Retriever) · [Notes](./LangChain_Retrievers/LangChain_Vector_Store_Retriever/Notes.md) |
-| **MMR** | Relevant **and diverse**, reduces duplicate-like results | [`LangChain_MMR_Retriever`](./LangChain_Retrievers/LangChain_MMR_Retriever) · [Notes](./LangChain_Retrievers/LangChain_MMR_Retriever/Notes.md) |
-| **Multi-Query** | An LLM rewrites the query into several versions, then merges the results | [`LangChain_Multi_Query_Retriever`](./LangChain_Retrievers/LangChain_Multi_Query_Retriever) · [Notes](./LangChain_Retrievers/LangChain_Multi_Query_Retriever/Notes.md) |
-| **Contextual Compression** | Retrieves first, then an LLM keeps **only the relevant part** of each chunk | [`LangChain_Contextual_Compression_Retriever`](./LangChain_Retrievers/LangChain_Contextual_Compression_Retriever) · [Notes](./LangChain_Retrievers/LangChain_Contextual_Compression_Retriever/Notes.md) |
+| **Wikipedia** | Queries the Wikipedia API (**keyword matching**, no semantic search) | [`01_LangChain_Wikipedia_Retriever`](./04_LangChain_Retrievers/01_LangChain_Wikipedia_Retriever) · [Notes](./04_LangChain_Retrievers/01_LangChain_Wikipedia_Retriever/Notes.md) |
+| **Vector Store** | Embeds the query and returns the **top-k** closest chunks | [`02_LangChain_Vector_Store_Retriever`](./04_LangChain_Retrievers/02_LangChain_Vector_Store_Retriever) · [Notes](./04_LangChain_Retrievers/02_LangChain_Vector_Store_Retriever/Notes.md) |
+| **MMR** | Relevant **and diverse**, reduces duplicate-like results | [`03_LangChain_MMR_Retriever`](./04_LangChain_Retrievers/03_LangChain_MMR_Retriever) · [Notes](./04_LangChain_Retrievers/03_LangChain_MMR_Retriever/Notes.md) |
+| **Multi-Query** | An LLM rewrites the query into several versions, then merges the results | [`04_LangChain_Multi_Query_Retriever`](./04_LangChain_Retrievers/04_LangChain_Multi_Query_Retriever) · [Notes](./04_LangChain_Retrievers/04_LangChain_Multi_Query_Retriever/Notes.md) |
+| **Contextual Compression** | Retrieves first, then an LLM keeps **only the relevant part** of each chunk | [`05_LangChain_Contextual_Compression_Retriever`](./04_LangChain_Retrievers/05_LangChain_Contextual_Compression_Retriever) · [Notes](./04_LangChain_Retrievers/05_LangChain_Contextual_Compression_Retriever/Notes.md) |
 
 ### Which one should I use?
 
@@ -357,7 +357,7 @@ Get a key from [Google AI Studio](https://aistudio.google.com/apikey). The `.env
 **5. Run any demo** (from inside its own folder, because some demos use relative file paths)
 
 ```bash
-cd LangChain_Retrievers/LangChain_MMR_Retriever
+cd 04_LangChain_Retrievers/03_LangChain_MMR_Retriever
 python3 LangChain_MMR_Retriever.py
 ```
 
