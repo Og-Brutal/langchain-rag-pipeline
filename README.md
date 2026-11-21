@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&weight=700&size=34&duration=3200&pause=800&color=00BFA6&center=true&vCenter=true&width=820&lines=%F0%9F%94%97+LangChain+RAG+Pipeline;Documents+%E2%86%92+Chunks+%E2%86%92+Embeddings+%E2%86%92+Retrieval;Built+with+LangChain+%2B+Google+Gemini" alt="LangChain RAG Pipeline" />
+
 
 # 🔗 LangChain RAG Pipeline
 
